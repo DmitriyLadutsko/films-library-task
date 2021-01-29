@@ -22,7 +22,6 @@ public class FilmServiceImpl implements FilmService {
         } else {
             films = filmRepository.findFilms(lastName, yearFrom, yearUntil);
         }
-
         return films;
     }
 

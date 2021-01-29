@@ -1,6 +1,5 @@
 package com.ladutsko.filmslibrary.facade.impl;
 
-import com.ladutsko.filmslibrary.exceptions.ResourceAlreadyExistException;
 import com.ladutsko.filmslibrary.exceptions.ResourceNotFoundException;
 import com.ladutsko.filmslibrary.exceptions.ValidationException;
 import com.ladutsko.filmslibrary.facade.FilmFacade;
@@ -33,27 +32,26 @@ public class FilmFacadeImpl implements FilmFacade {
 
     @Override
     public Film createFilm(Film film) {
-        if (filmRepository.existsFilmByNameAndReleaseDateAndGenreAndDirector(
-                film.getName(),
-                film.getReleaseDate(),
-                film.getGenre(),
-                film.getDirector())) {
-            throw new ResourceAlreadyExistException("Such film already exists.");
-        }
         return filmService.createFilm(film);
     }
 
     @Override
     public Film updateFilm(Film film) {
-        filmRepository.findById(film.getId())
-                .orElseThrow(() -> new ResourceNotFoundException("Film not found."));
-
+        if (!filmRepository.existsById(film.getId())) {
+            throw new ResourceNotFoundException("Film not found.");
+        }
         return filmService.updateFilm(film);
     }
 
     @Override
     public List<Film> getAllFilms() {
         return filmRepository.findAll();
+    }
+
+    @Override
+    public void delete(Integer id) {
+        filmRepository.delete(filmRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Film not found.")));
     }
 
     private void checkYearUntilGreaterThenFrom(Integer yearFrom, Integer yearUntil) {
