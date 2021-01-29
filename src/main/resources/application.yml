@@ -1,0 +1,13 @@
+server:
+  servlet:
+    context-path: /filmslibrary-api
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/movies
+    username: director
+    password: 1234
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL95Dialect
