@@ -1,6 +1,7 @@
 server:
   servlet:
     context-path: /filmslibrary-api
+  port: 8070
 
 spring:
   datasource:

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Title</title>
+    <style>
+        tr {
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div style="height: 30px"></div>
+    <form class="container row justify-content-between" id="search">
+        <div class="col-3">
+            <label for="last-name" class="text-muted">Last Name</label>
+            <div class="input-group mb-3">
+                <input name="lastName" type="text" class="form-control" id="last-name"/>
+            </div>
+        </div>
+        <div class="col-2">
+            <label for="from" class="text-muted">Release From</label>
+            <div class="input-group mb-3">
+                <input name="yearFrom" id="from" class="form-control" type="number"/>
+            </div>
+        </div>
+        <div class="col-2">
+            <label for="until" class="text-muted">Release Until</label>
+            <div class="input-group mb-3">
+                <input name="yearUntil" class="form-control" id="until" type="number"/>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="input-group mb-3" style="margin-top: 30px">
+                <input id="button" style="width: 200px" class="btn btn-primary" type="button" value="Search"/>
+            </div>
+        </div>
+    </form>
+
+    <table class="container table-bordered text-center">
+        <thead>
+        <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Birth Date</th>
+            <th scope="col">Film Name</th>
+            <th scope="col">Release Date</th>
+            <th scope="col">Genre</th>
+        </tr>
+        </thead>
+        <tbody id="films">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
