@@ -7,7 +7,7 @@ const searchHandle = (event) => {
         .then(response => response.json())
         .then(data => {
             if (data.status) {
-                alert(data.message);
+                alert('error: ' + data.message);
                 return;
             }
             if (data.length > 0) {
@@ -27,7 +27,7 @@ const searchHandle = (event) => {
                     filmRow.appendChild(firstNameCol);
                     lastNameCol.innerHTML = film.director.lastName;
                     filmRow.appendChild(lastNameCol);
-                    birthDateCol.innerHTML = film.director.birhDate;
+                    birthDateCol.innerHTML = film.director.birthDate;
                     filmRow.appendChild(birthDateCol);
                     filmNameCol.innerHTML = film.name;
                     filmRow.appendChild(filmNameCol);

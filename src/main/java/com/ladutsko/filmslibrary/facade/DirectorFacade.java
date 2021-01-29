@@ -9,4 +9,8 @@ public interface DirectorFacade {
     List<Director> getAll();
 
     Director getOne(Integer directorId);
+
+    Director createDirector(Director director);
+
+    Director updateDirector(Director director);
 }

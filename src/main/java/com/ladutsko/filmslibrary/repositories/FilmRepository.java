@@ -1,12 +1,10 @@
 package com.ladutsko.filmslibrary.repositories;
 
-import com.ladutsko.filmslibrary.model.Director;
 import com.ladutsko.filmslibrary.model.Film;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import java.time.LocalDate;
 import java.util.List;
 
 public interface FilmRepository extends JpaRepository<Film, Integer> {
@@ -19,7 +17,6 @@ public interface FilmRepository extends JpaRepository<Film, Integer> {
                           @Param("yearFrom") Integer yearFrom,
                           @Param("yearUntil") Integer yearUntil);
 
-    boolean existsFilmByNameAndReleaseDateAndGenreAndDirector(
-            String name, LocalDate releaseDate, String genre, Director director);
+    boolean existsById(Integer id);
 
 }

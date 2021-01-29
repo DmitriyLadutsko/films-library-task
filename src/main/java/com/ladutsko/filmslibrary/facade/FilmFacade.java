@@ -13,4 +13,6 @@ public interface FilmFacade {
     Film updateFilm(Film film);
 
     List<Film> getAllFilms();
+
+    void delete(Integer id);
 }
