@@ -1,5 +1,4 @@
-let searchButton = document.getElementById('button');
-searchButton.addEventListener('click', (ev) => {
+const searchHandle = (event) => {
     let name = document.forms['search'].elements['last-name'].value;
     let from = document.forms['search'].elements['from'].value;
     let until = document.forms['search'].elements['until'].value;
@@ -43,4 +42,4 @@ searchButton.addEventListener('click', (ev) => {
             }
         })
         .catch(alert);
-})
+};
