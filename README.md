@@ -26,7 +26,7 @@ ________________________
  ```
    CREATE DATABASE movies;
    CREATE USER director WITH ENCRYPTED PASSWORD '1234';
-   GRANT ALL PRIVILEGES ON DATABASE pg1 TO admin;
+   GRANT ALL PRIVILEGES ON DATABASE movies TO director;
 ```
 **_Build and launch the app:_**
 
