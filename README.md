@@ -19,6 +19,8 @@ The following endpoints have also been created but not yet implemented on the UI
 - PosgreSQL 10.15 DB
 ________________________
 
+**_Before building and running the app:_**
+
 - Clone the repository with the app by following [link](https://github.com/DmitriyLadutsko/films-library-task.git) to the local directory or download the ZIP archive from the same link
 - Сreate a new database and a new user in PostgreSQL from psql console:
  ```
@@ -26,7 +28,8 @@ ________________________
    CREATE USER director WITH ENCRYPTED PASSWORD '1234';
    GRANT ALL PRIVILEGES ON DATABASE pg1 TO admin;
 ```
-*Build and launch the app*
+**_Build and launch the app:_**
+
 - run a *cmd* from the root directory of the application and enter the following command: ```mvnw package```
 - after building the application, you need to run the jar-file created in the directory *target/* :
 ```java -jar target/films-library-0.0.1-SNAPSHOT.jar```
