@@ -35,5 +35,5 @@ The app is running.
 
 Migration sql-scripts automatically populate the created movies database with the initial values. (Their physical location: *films-library/src/main/resources/db.migration)*
 
-You can try it out at the address in the browser: ```http//localhost:8070/filmlibrary-api```
+You can try it out at the address in the browser: ```http//localhost:8070/filmslibrary-api```
 
